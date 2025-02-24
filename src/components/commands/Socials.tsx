@@ -64,13 +64,13 @@ const socials = [
   {
     id: 3,
     title: "Facebook",
-    url: "https://www.facebook.com/satnaing.dev",
+    url: "https://www.facebook.com/parsher.xyz",
     tab: 1,
   },
   {
     id: 4,
     title: "Instagram",
-    url: "https://instagram.com/satnaing.dev",
+    url: "https://instagram.com/parsher.xyz",
     tab: 0,
   },
 ];

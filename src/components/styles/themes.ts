@@ -101,6 +101,22 @@ const theme: Themes = {
       },
     },
   },
+  pink: {
+    id: "T_007",
+    name: "pink",
+    colors: {
+      body: "#FFC0CB",
+      scrollHandle: "#FF8DA1",
+      scrollHandleHover: "#FF748C",
+      primary: "#FF4D6D",
+      secondary: "#FF85A1",
+      text: {
+        100: "#4F0E1F",
+        200: "#801830",
+        300: "#B22044",
+      },
+    },
+  },
 };
 
 export default theme;

@@ -11,6 +11,10 @@ import History from "./commands/History";
 import Projects from "./commands/Projects";
 import Socials from "./commands/Socials";
 import Themes from "./commands/Themes";
+import Skills from "./commands/Skills";
+import Contact from "./commands/Contact";
+import Time from "./commands/Time";
+import Shortcuts from "./commands/Shortcuts";
 import { OutputContainer, UsageDiv } from "./styles/Output.styled";
 import { termContext } from "./Terminal";
 import { useContext } from "react";
@@ -48,6 +52,10 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           themes: <Themes />,
           welcome: <Welcome />,
           whoami: <GeneralOutput>visitor</GeneralOutput>,
+          skills: <Skills />,
+          contact: <Contact />,
+          time: <Time />,
+          shortcuts: <Shortcuts />,
         }[cmd]
       }
     </OutputContainer>

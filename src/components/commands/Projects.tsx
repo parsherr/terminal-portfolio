@@ -58,7 +58,7 @@ const projects = [
     id: 1,
     title: "Parsher's Blog",
     desc: "My personal blog where I can write down my thoughts and experiences.",
-    url: "https://satnaing.dev/blog/",
+    url: "https://parsher.xyz/blog/",
   },
   {
     id: 2,

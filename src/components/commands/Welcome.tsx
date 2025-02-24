@@ -1,20 +1,67 @@
-import {
-  Cmd,
-  HeroContainer,
-  Link,
-  PreImg,
-  PreName,
-  PreNameMobile,
-  PreWrapper,
-  Seperator,
-} from "../styles/Welcome.styled";
+import { Wrapper } from "../styles/Output.styled";
+import { CommandSpan } from "../styles/Welcome.styled";
+import React from "react";
+import styled from "styled-components";
+
+const WelcomeContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  
+  @media (max-width: 968px) {
+    flex-direction: column;
+  }
+`;
+
+const ContentSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+`;
+
+const IllustrationSection = styled.div`
+  display: none;
+  
+  @media (min-width: 968px) {
+    display: block;
+    flex: 1;
+  }
+`;
+
+const PreBlock = styled.pre`
+  font-size: 0.9rem;
+  margin: 0;
+  white-space: pre;
+  
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+    white-space: pre-wrap;
+  }
+`;
+
+const Separator = styled.div`
+  color: ${({ theme }) => theme.colors?.text[200]};
+  margin: 0.5rem 0;
+`;
+
+const StyledLink = styled.a`
+  color: ${({ theme }) => theme.colors?.primary};
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 const Welcome: React.FC = () => {
   return (
-    <HeroContainer data-testid="welcome">
-      <div className="info-section">
-        <PreName>
-          {`        
+    <Wrapper data-testid="welcome">
+      <WelcomeContainer>
+        <ContentSection>
+          <PreBlock>
+            {`        
  /$$$$$$$                               /$$                          
  | $$__  $$                             | $$                          
  | $$  \ $$ /$$$$$$   /$$$$$$   /$$$$$$$| $$$$$$$   /$$$$$$   /$$$$$$ 
@@ -23,48 +70,32 @@ const Welcome: React.FC = () => {
  | $$      /$$__  $$| $$       \____  $$| $$  | $$| $$_____/| $$      
  | $$     |  $$$$$$$| $$       /$$$$$$$/| $$  | $$|  $$$$$$$| $$      
  |__/      \_______/|__/      |_______/ |__/  |__/ \_______/|__/      
-          `}
-        </PreName>
-        <PreWrapper>
-          <PreNameMobile>
+            `}
+          </PreBlock>
+          <div>Welcome to my terminal portfolio.</div>
+          <Separator>----</Separator>
+          <div>
+            This is my main portfolio site:{" "}
+            <StyledLink href="https://parsher.xyz" target="_blank" rel="noopener noreferrer">
+              parsher.xyz
+            </StyledLink>
+          </div>
+          <Separator>----</Separator>
+          <div>
+            For a list of available commands, type <CommandSpan>help</CommandSpan>
+          </div>
+        </ContentSection>
+        <IllustrationSection>
+          <PreBlock>
             {`
- /$$$$$$$                               /$$                          
- | $$__  $$                             | $$                          
- | $$  \ $$ /$$$$$$   /$$$$$$   /$$$$$$$| $$$$$$$   /$$$$$$   /$$$$$$ 
- | $$$$$$$/|____  $$ /$$__  $$ /$$_____/| $$__  $$ /$$__  $$ /$$__  $$
- | $$____/  /$$$$$$$| $$  \__/|  $$$$$$ | $$  \ $$| $$$$$$$$| $$  \__/
- | $$      /$$__  $$| $$       \____  $$| $$  | $$| $$_____/| $$      
- | $$     |  $$$$$$$| $$       /$$$$$$$/| $$  | $$|  $$$$$$$| $$      
- |__/      \_______/|__/      |_______/ |__/  |__/ \_______/|__/
- 
-          `}
-          </PreNameMobile>
-        </PreWrapper>
-        <div>Welcome to my terminal portfolio. (Version 1.3.1)</div>
-        <Seperator>----</Seperator>
-        <div>
-          This is my main portfolio site: {" "}
-          <Link href="https://parsher.xyz">
-          parsher.xyz
-          </Link>
-          
-        </div>
-        <Seperator>----</Seperator>
-        <div>
-          For a list of available commands, type `<Cmd>help</Cmd>`.
-        </div>
-      </div>
-      <div className="illu-section">
-        <PreImg>
-          {`
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠟⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠀⠀⠈⠻⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣶⣦⡀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⡇⠀⠀⠀⠀⠈⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠾⠋⠁⢸⣿⡇⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⡇⠀⠀⠀⠀⠀⠀⠀⠙⢷⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡾⠛⠁⠀⠀⠀⣿⣼⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡏⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡾⠛⠁⠀⠀⠀⠀⠀⣸⡿⣿⠂⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡾⠛⠁⠀⠀⠀⣿⣼⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡏⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⢣⡟⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⣿⠀⠀⠀⠀⠀⠶⠶⠶⠶⠶⠶⠿⠷⠶⠶⠤⣤⣤⣀⣀⡀⢀⣤⡾⠛⠁⠀⠀⠀⠀⠀⠀⠀⢠⣿⢣⡟⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⣽⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡷⣸⠇⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡷⣸⠇⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⢣⡿⠁⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣼⠃⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠇⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡏⠀⠀⠀⠀⠀⠀
@@ -87,10 +118,11 @@ const Welcome: React.FC = () => {
 ⠀⣰⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⣿⠀⠀⠀⠀⠀⠀⠀⠀
 ⣾⢿⣾⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠛⠀⠀⠀⠀⠀⠀⠀⠀
 ⢀⣾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠀⠀⠀⠀⠀⠀⠀⠀
-         `}
-        </PreImg>
-      </div>
-    </HeroContainer>
+            `}
+          </PreBlock>
+        </IllustrationSection>
+      </WelcomeContainer>
+    </Wrapper>
   );
 };
 

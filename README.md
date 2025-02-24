@@ -1,84 +1,145 @@
-# Terminal Portfolio Website by Parsher
+# 🚀 Terminal Portfolio
 
-![Terminal Portfolio Website by Parsher](https://user-images.githubusercontent.com/53733092/194220661-e2ff8b4c-f64a-4b64-a836-c52fae6bbcda.png)
+<div align="center">
+  <img src="public/terminal-preview.gif" alt="Terminal Portfolio Preview" width="700"/>
 
-![ts](https://badgen.net/badge/Built%20With/TypeScript/blue?style=flat-square)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/81fdb91d-c06f-46c2-b18d-dfc6f090f281/deploy-status)](https://app.netlify.com/sites/terminal-sn/deploys)
-![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+  ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+  ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+  
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/81fdb91d-c06f-46c2-b18d-dfc6f090f281/deploy-status)](https://app.netlify.com/sites/terminal-portfolio/deploys)
+</div>
 
-My perfolio website in terminal version developed with React, TypeScript and Styled-Components. Multiple themes supported and keyboard shortcuts can be used for some functionalities.
+## 📖 İçindekiler
 
-Blog Post: https://satnaing.dev/blog/posts/how-do-i-develop-my-terminal-portfolio-website-with-react
+- [🌟 Özellikler](#-özellikler)
+- [🛠️ Teknolojiler](#️-teknolojiler)
+- [🎨 Temalar](#-temalar)
+- [⌨️ Komutlar](#️-komutlar)
+- [🚀 Kurulum](#-kurulum)
+- [📱 Responsive Tasarım](#-responsive-tasarım)
+- [🔧 Geliştirme](#-geliştirme)
+- [🤝 Katkıda Bulunma](#-katkıda-bulunma)
+- [📄 Lisans](#-lisans)
 
-## Features
+## 🌟 Özellikler
 
-- Responsive Design 📱💻
-- Multiple themes 🎨
-- Autocomplete feature ✨ (TAB | Ctrl + i)
-- Go previous and next command ⬆️⬇️
-- View command history 📖
-- PWA and Offline Support 🔥
-- Well-tested ✅
+- 🎯 **Terminal Benzeri Arayüz**: Gerçek terminal deneyimi
+- 🎨 **7 Farklı Tema**: Dark, Light, Blue Matrix, Espresso, Green Goblin, Ubuntu ve Pink
+- ⚡ **Hızlı & Performanslı**: Vite ile optimize edilmiş build
+- 📱 **Responsive Tasarım**: Tüm cihazlarda mükemmel görünüm
+- ⌨️ **Klavye Kısayolları**: Verimli kullanım için kısayollar
+- 🔍 **Otomatik Tamamlama**: TAB tuşu ile komut tamamlama
+- 📦 **PWA Desteği**: Çevrimdışı kullanım imkanı
+- 🌐 **SEO Optimizasyonu**: Arama motorları için optimize edilmiş
+- 🔄 **Komut Geçmişi**: Önceki komutlara kolay erişim
 
-## Tech Stack
+## 🛠️ Teknolojiler
 
-**Frontend** - [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)  
-**Styling** - [Styled-Components](https://styled-components.com/)  
-**UI/UX** - [Figma](https://figma.com/)  
-**State Management** - [ContextAPI](https://reactjs.org/docs/context.html)  
-**Testing** - [Vitest](https://vitest.dev/), [React Testing Library](https://testing-library.com/)  
-**Deployment** - [Netlify](https://app.netlify.com/)
+- **Frontend Framework**: React 18 + TypeScript
+- **Styling**: Styled Components
+- **Build Tool**: Vite
+- **State Management**: Context API
+- **Testing**: Vitest + React Testing Library
+- **Deployment**: Netlify
+- **Package Manager**: pnpm
+- **Code Quality**: ESLint + Prettier
 
-## Multiple Themes
+## ⌨️ Komutlar
 
-Currently, this website supports 6 themes. Type `themes` in the terminal for more info.
-![terminal-portfolio-themes](https://user-images.githubusercontent.com/53733092/194221801-94f1c28b-4865-4b7f-a73e-d41132519bea.png)
+| Komut | Açıklama |
+|-------|-----------|
+| `help` | Tüm komutları listele |
+| `about` | Hakkımda bilgi |
+| `skills` | Teknik yetenekler |
+| `projects` | Projeler |
+| `contact` | İletişim bilgileri |
+| `themes` | Tema değiştirme |
+| `clear` | Terminali temizle |
+| `history` | Komut geçmişi |
+| `shortcuts` | Klavye kısayolları |
 
-## Lighthouse Score
+## 🎨 Temalar
 
-<p align="center">
-<img width="710" alt="Parsher Terminal Lighthouse Score" src="public/lighthouse-result.svg">
-</p>
+Terminal 7 farklı tema seçeneği sunar:
 
-## Running Locally
+- 🌙 **Dark**: Klasik koyu tema
+- ☀️ **Light**: Aydınlık tema
+- 🌊 **Blue Matrix**: Matrix tarzı mavi tema
+- ☕ **Espresso**: Kahve tonlarında tema
+- 🦹 **Green Goblin**: Yeşil hacker teması
+- 🐧 **Ubuntu**: Ubuntu terminal teması
+- 🎀 **Pink**: Modern pembe tema
 
-Clone the project
+Tema değiştirmek için: `themes set <tema-adı>`
+
+## 🚀 Kurulum
 
 ```bash
-git clone https://github.com/satnaing/terminal-portfolio.git
-```
+# Repoyu klonla
+git clone https://github.com/parsherr/terminal-portfolio.git
 
-Go to the project directory
-
-```bash
+# Proje dizinine git
 cd terminal-portfolio
+
+# Bağımlılıkları yükle
+pnpm install
+
+# Geliştirme sunucusunu başlat
+pnpm dev
+
+# Prod build
+pnpm build
 ```
 
-Remove remote origin
+## 📱 Responsive Tasarım
+
+- 📱 Mobil cihazlar (>320px)
+- 📱 Tablet cihazlar (>768px)
+- 💻 Masaüstü (>1024px)
+- 🖥️ Geniş ekranlar (>1280px)
+
+## ⌨️ Klavye Kısayolları
+
+| Kısayol | İşlev |
+|---------|-------|
+| `Tab` | Komut tamamlama |
+| `↑` | Önceki komut |
+| `↓` | Sonraki komut |
+| `Ctrl + L` | Ekranı temizle |
+| `Ctrl + C` | Komutu iptal et |
+
+## 🔧 Geliştirme
 
 ```bash
-git remote remove origin
+# Test
+pnpm test
+
+# Lint
+pnpm lint
+
+# Format
+pnpm format
+
+# Type Check
+pnpm typecheck
 ```
 
-Install dependencies
+## 🤝 Katkıda Bulunma
 
-```bash
-npm install
-```
+1. Fork'layın
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Commit'leyin (`git commit -m 'feat: add amazing feature'`)
+4. Push'layın (`git push origin feature/amazing-feature`)
+5. Pull Request açın
 
-Start the server
+## 📄 Lisans
 
-```bash
-npm run dev
-```
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
 
-## Inspiration and Credits
+---
 
-Here are some inspiration for this kind of terminal website. Only some features and functionalities are inspired by these following websites. All codes are written on my own.
-
-- [term m4tt72](https://term.m4tt72.com/)
-- [Forrest](https://fkcodes.com/)
-
-## Author
-
-- [@satnaing](https://satnaing.dev)
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/parsherr">Parsher</a></sub>
+</div>
