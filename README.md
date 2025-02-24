@@ -7,10 +7,8 @@
   ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
   ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
   ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-  
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/81fdb91d-c06f-46c2-b18d-dfc6f090f281/deploy-status)](https://app.netlify.com/sites/
-</div>
-### demo : <a>https://terminal-portfolio-teal.vercel.app<a/>
+
+### [🌟 Demo Watch](https://terminal-portfolio-teal.vercel.app)
 ## 📖 İçindekiler
 
 - [🌟 Özellikler](#-özellikler)
